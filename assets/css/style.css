@@ -59,6 +59,7 @@ input {
 }
 
 a {
+	color: #fafafa;
 	text-decoration: none;
 	transition: linear 0.3s;
 }
