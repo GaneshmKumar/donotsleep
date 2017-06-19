@@ -26,14 +26,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', router);
 app.use('/assets', express.static(__dirname + '/assets'));
 
-const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URL = 'mongodb://127.0.0.1:27017/donotsleep'//process.env.MONGO_URL;
+
 
 mongoose.connect(MONGO_URL, () => { console.log('Connected to MongoDB') });
 
 const PORT = process.env.PORT || 1234
 app.listen(PORT, () => { console.log(`Server running at ${PORT} ...`)} );	
 
-common.startAllJobs();
+//common.startAllJobs();
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

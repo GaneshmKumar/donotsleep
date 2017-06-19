@@ -16,6 +16,7 @@ router.route('/')
 	})
 	.post(function(req, res) {
 		var appURL = 'http://' + req.body.app + '.herokuapp.com';
+		console.log(appURL);
 		request(appURL, function(err, response, body) {
 			if(err)
 			{

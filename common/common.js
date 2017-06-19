@@ -16,7 +16,7 @@ exports.ping = function(appURL)
 		var hr = d.getHours(),
 			min = d.getMinutes(),
 			sec = d.getSeconds();
-		console.log('url: ', appURL, 'statusCode:', response && response.statusCode, 'Time: ', hr+':'+min+':'+sec); 
+		//console.log('url: ', appURL, 'statusCode:', response && response.statusCode, 'Time: ', hr+':'+min+':'+sec); 
 	});
 }
 
