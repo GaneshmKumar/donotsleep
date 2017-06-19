@@ -9,7 +9,7 @@ exports.ping = function(appURL)
 	request(appURL, function (error, response, body) {
 		if(error)
 		{
-			res.status(500).end("Internal Server Error");
+			throw error;
 		}
 
 		var d = new Date();
