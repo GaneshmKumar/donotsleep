@@ -16,16 +16,18 @@ exports.ping = function(appURL)
 		var hr = d.getHours(),
 			min = d.getMinutes(),
 			sec = d.getSeconds();
-		//console.log('url: ', appURL, 'statusCode:', response && response.statusCode, 'Time: ', hr+':'+min+':'+sec); 
+		console.log('url: ', appURL, 'statusCode:', response && response.statusCode, 'Time: ', hr+':'+min+':'+sec); 
 	});
 }
 
 exports.startAllJobs = function() {
 	URL.find({}, function(err, data) {
+		console.log(data);
 		if(err) throw err;
-		for(var i = 0; i < data.length; i ++)
-		{
-			var appURL = data[i].url;
+		data.forEach(function(item, index, arr) {
+			var appURL = data[index].url;
+			common.ping(appURL);
+			console.log(appURL);
 			var job = new CronJob({
 				cronTime: '45 * * * * *',
 				onTick: function() {
@@ -33,6 +35,6 @@ exports.startAllJobs = function() {
 				},
 				start: true
 			});
-		}
+		})
 	});
 }
