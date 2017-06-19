@@ -26,8 +26,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', router);
 app.use('/assets', express.static(__dirname + '/assets'));
 
-const MONGO_URL = process.env.MONGO_URL;
+var MONGO_URL;
+if(app.get('env') == "production")
+{
+  MONGO_URL = process.env.MONGO_URL;  
+}
+else
+{
+  MONGO_URL = 'mongodb://127.0.0.1:27017/donotsleep';
+}
 
+console.log(MONGO_URL);
 mongoose.connect(MONGO_URL, () => { console.log('Connected to MongoDB') });
 
 const PORT = process.env.PORT || 1234

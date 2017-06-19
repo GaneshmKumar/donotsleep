@@ -46,7 +46,7 @@ router.route('/')
 									res.status(500).end('Internal Server Error'); 
 								}
 								var job = new CronJob({
-									cronTime: '45 * * * * *',
+									cronTime: '* */30 * * * *',
 									onTick: function() {
 						  				common.ping(appURL);
 									},

@@ -29,7 +29,7 @@ exports.startAllJobs = function() {
 			common.ping(appURL);
 			console.log(appURL);
 			var job = new CronJob({
-				cronTime: '45 * * * * *',
+				cronTime: '* */30 * * * *',
 				onTick: function() {
 					common.ping(appURL);
 				},
