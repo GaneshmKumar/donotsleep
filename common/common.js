@@ -31,9 +31,8 @@ exports.startAllJobs = function() {
 				onTick: function() {
 					common.ping(appURL);
 				},
-				start: false
+				start: true
 			});
-			job.start();
 		}
 	});
 }
