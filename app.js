@@ -33,7 +33,7 @@ mongoose.connect(MONGO_URL, () => { console.log('Connected to MongoDB') });
 const PORT = process.env.PORT || 1234
 app.listen(PORT, () => { console.log(`Server running at ${PORT} ...`)} );	
 
-//common.startAllJobs();
+common.startAllJobs();
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
