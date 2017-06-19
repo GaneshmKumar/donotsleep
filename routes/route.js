@@ -3,7 +3,6 @@ var CronJob = require('cron').CronJob;
 var request = require('request');
 var path = require('path');
 
-var config = require('../config/config')
 var common = require('../common/common');
 var URL = require('../models/urlSchema');
 
