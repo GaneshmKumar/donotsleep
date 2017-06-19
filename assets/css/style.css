@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Voltaire|Medula+One|Fredoka+One');
+
+body {
+	background: #4F3673;
+	text-align: center;
+}
+
+#app {
+	position: relative;
+	top: 160px;
+}
+
+img {
+margin: 0px auto;
+display: block;
+}
+
+.input-group {
+	margin-top: 20px;
+}
+
+.form-control:focus {
+	border-color: transparent;
+	outline: none;
+	box-shadow: none;
+}
+
+.input-group span {
+	border-color: transparent;
+	font-family: 'Voltaire', sans-serif;
+	color: #202833;
+	font-size: 15px;
+	font-weight: bold;
+	background: #fafafa;
+}
+
+input {
+	border-color: transparent;
+	font-family: 'Fredoka One';
+	font-size: 18px !important;
+	color: #263238 !important;
+	height: 50px !important;
+	padding: 20px 20px;
+	background-color: #C1C1C1 !important;
+}
+
+#description {
+	margin-top: 10px;
+	color: #fafafa;
+	font-family: 'Voltaire', sans-serif;
+	font-size: 20px;
+}
+
+#author {
+	margin-top: 10px;
+	color: #fafafa;
+	font-family: 'Medula One', cursive;
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+	transition: linear 0.3s;
+}
+
+a:hover {
+	color: #fafafa;
+	opacity: 0.8;
+	text-decoration: none;
+}
+
+a:visited,a:active, a:focus {
+	color: #fafafa;
+	text-decoration: none !important;
+}
+
+#msg {
+	font-family: 'Voltaire', sans-serif;
+	font-size: 20px;
+	border: solid 1px transparent;
+}
+
+#error {
+	display: none;
+	margin-top: 10px;
+	color: #ff4436;
+}
+
+#success {
+	display: none;
+	color: #8BC34A;
+}
+
+#loading {
+	display: none;
+	color: #FFC107;
+}
